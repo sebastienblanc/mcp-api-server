@@ -8,6 +8,7 @@ import jakarta.annotation.security.RolesAllowed;
 @Authenticated
 public class MCPTools {
 
+    @RolesAllowed("platform-team")
     @Tool(name = "add-new-db-region", description = "Add a new database region")
     public String addNewDBRegion(String region) {
         Log.info("Adding new DB region: " + region);
