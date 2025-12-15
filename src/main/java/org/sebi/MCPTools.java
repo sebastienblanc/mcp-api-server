@@ -15,4 +15,11 @@ public class MCPTools {
         return "New DB region added: " + region;
     }
 
+    @RolesAllowed("feature-team")
+    @Tool(name = "request-new-db-region", description = "Request a new database region")
+    public String requestNewDBRegion(String region) {
+        Log.info("Request a new DB region: " + region);
+        return "DB region requested: " + region;
+    }
+
 }
